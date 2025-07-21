@@ -1,0 +1,19 @@
+{
+    "name": "eskcti/app-codeflix-admin-catalog-video-php",
+    "description": "App With PHP - Catalog Video",
+    "authors": [
+        {
+            "name": "Edson Shideki Kokado",
+            "email": "eskokado@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/Core/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "mockery/mockery": "^1.6"
+    }
+}
