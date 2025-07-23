@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /var/www/src/Core/Domain/Entities</title>
+  <title>Dashboard for /var/www/src/Core/Domain/Repositories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../../_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
   <link href="../../_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
        <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="../../index.html">/var/www/src/Core</a></li>
          <li class="breadcrumb-item"><a href="../index.html">Domain</a></li>
-         <li class="breadcrumb-item"><a href="index.html">Entities</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Repositories</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -156,7 +156,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Class Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -174,7 +174,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,11], "Method Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -224,7 +224,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[100,16,"<a href=\"Category.php.html#13\">Core\\Domain\\Entities\\Category<\/a>"],[100,3,"<a href=\"Traits\/MethodsMagicsTrait.php.html#7\">Core\\Domain\\Entities\\Traits\\MethodsMagicsTrait<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -248,7 +248,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,6,"<a href=\"Category.php.html#17\">Core\\Domain\\Entities\\Category::__construct<\/a>"],[100,1,"<a href=\"Category.php.html#32\">Core\\Domain\\Entities\\Category::activate<\/a>"],[100,1,"<a href=\"Category.php.html#37\">Core\\Domain\\Entities\\Category::deactivate<\/a>"],[100,3,"<a href=\"Category.php.html#42\">Core\\Domain\\Entities\\Category::update<\/a>"],[100,1,"<a href=\"Category.php.html#51\">Core\\Domain\\Entities\\Category::getId<\/a>"],[100,1,"<a href=\"Category.php.html#56\">Core\\Domain\\Entities\\Category::getName<\/a>"],[100,1,"<a href=\"Category.php.html#61\">Core\\Domain\\Entities\\Category::getDescription<\/a>"],[100,1,"<a href=\"Category.php.html#66\">Core\\Domain\\Entities\\Category::isActive<\/a>"],[100,1,"<a href=\"Category.php.html#71\">Core\\Domain\\Entities\\Category::getCreatedAt<\/a>"],[100,2,"<a href=\"Traits\/MethodsMagicsTrait.php.html#9\">Core\\Domain\\Entities\\Traits\\MethodsMagicsTrait::__get<\/a>"],[100,1,"<a href=\"Traits\/MethodsMagicsTrait.php.html#18\">Core\\Domain\\Entities\\Traits\\MethodsMagicsTrait::id<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);
